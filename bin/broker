@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+begin
+	require 'broker'
+	require 'rack'
+rescue LoadError
+	require 'rubygems'
+	require 'broker'
+	require 'rack'
+end
+
+Rack::Handler::Mongrel.run Broker::Server.new, :Port => ARGV[0] || 1337
