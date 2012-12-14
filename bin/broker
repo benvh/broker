@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 begin
 	require 'broker'
 	require 'rack'
@@ -9,4 +8,4 @@ rescue LoadError
 	require 'rack'
 end
 
-Rack::Handler::Mongrel.run Broker::Server.new, :Port => ARGV[0] || 1337
+Rack::Handler::Mongrel.run Broker::Proxy.new, :Port => ARGV[0] || 1337

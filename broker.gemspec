@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
 	s.add_dependency "rack"
 	s.add_dependency "mongrel"
 
-	s.files			= ["bin/broker", "lib/broker.rb", "lib/broker/base.rb"]
+	s.files			= ["bin/broker", "lib/broker.rb", "lib/broker/proxy.rb", "lib/broker/request.rb", "lib/broker/request_handler.rb"]
 	s.executables	= ["broker"]
 end
