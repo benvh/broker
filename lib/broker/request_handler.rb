@@ -2,13 +2,10 @@ require 'broker/request'
 require 'net/http'
 
 class RequestHandler
-	def handle(request)		
-		
+	def handle(request)				
 		head = get_head(request)
-		puts request.full_path
-		while (301..303) === head.code.to_i
+		while (301..302) === head.code.to_i #Page moved...
 			request = rewrite_moved_request(request, head)
-			puts request.full_path
 			head = get_head(request)
 		end
 
