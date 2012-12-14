@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 	s.description	= "A Daemon that forwards all http requests it receives"
 	s.authors		= ["Ben Van Houtven"]
 	s.email			= 'ben@vanhoutven.org'	
-	s.homepage		= 'htpt://rubygems.org/gems/broker'
+	s.homepage		= '...'
 
 	s.add_dependency "rack"
 	s.add_dependency "mongrel"
