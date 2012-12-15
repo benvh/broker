@@ -14,7 +14,7 @@ module Broker
 				@@proxy = Net::HTTP::Proxy(proxy_uri.host, proxy_uri.port)
 			end
 
-			@uri = URI(BASE_URI + env["REQUEST_URI"])
+			@uri = URI(Broker.config[:BASE_URI] + env["REQUEST_URI"])
 			@method = env["REQUEST_METHOD"]
 			@host = @uri.host
 			@path = @uri.path

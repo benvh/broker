@@ -3,9 +3,8 @@ begin
 	require 'broker'
 	require 'rack'
 rescue LoadError
-	require 'rubygems'
+	require 'rubygems'	
 	require 'broker'
-	require 'rack'
 end
 
-Rack::Handler::Mongrel.run Broker::Proxy.new, :Port => ARGV[0] || 1337
+Rack::Handler::Mongrel.run Broker::Proxy.new, :Port => Broker.config[:port]

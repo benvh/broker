@@ -1,5 +1,6 @@
+require 'rack'
+require 'net/http'
+require 'broker/request'
+require 'broker/request_handler'
 require 'broker/proxy'
-
-module Broker
-	BASE_URI = "http://reddit.com"
-end
+require 'broker/config'
